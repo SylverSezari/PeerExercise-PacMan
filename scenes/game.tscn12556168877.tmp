@@ -5857,7 +5857,7 @@ tile_size = Vector2i(8, 8)
 sources/0 = SubResource("TileSetAtlasSource_7jktm")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e2o6t"]
-radius = 2.0
+radius = 5.8
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7jktm"]
 shader = ExtResource("3_u5sy4")
@@ -6306,8 +6306,7 @@ safe_margin = 0.001
 script = ExtResource("2_p57ef")
 
 [node name="Collision" type="CollisionShape2D" parent="PacMan"]
-position = Vector2(0, -0.9999976)
-scale = Vector2(1.5, 1.5)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_e2o6t")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="PacMan"]
@@ -6315,41 +6314,34 @@ material = SubResource("ShaderMaterial_7jktm")
 sprite_frames = SubResource("SpriteFrames_edr7y")
 animation = &"down"
 
-[node name="GhostRed" type="CharacterBody2D" parent="." groups=["Ghosts"]]
-position = Vector2(100, 91)
+[node name="GhostRed" type="CharacterBody2D" parent="."]
+position = Vector2(113, 115)
 scale = Vector2(0.8, 0.8)
 collision_layer = 8
 collision_mask = 3
 script = ExtResource("4_gee14")
 
-[node name="Area2D" type="Area2D" parent="GhostRed"]
-scale = Vector2(0.79, 0.79)
-collision_layer = 8
-collision_mask = 3
-
-[node name="Collision" type="CollisionShape2D" parent="GhostRed/Area2D"]
-scale = Vector2(0.885, 0.885)
+[node name="Collision" type="CollisionShape2D" parent="GhostRed"]
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_feb5d")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="GhostRed"]
+visible = false
 material = SubResource("ShaderMaterial_eow3j")
+position = Vector2(112, 141)
 sprite_frames = SubResource("SpriteFrames_7jktm")
 animation = &"up"
 frame_progress = 0.8292039
 
-[node name="Collision" type="CollisionShape2D" parent="GhostRed"]
-scale = Vector2(0.665, 0.665)
-shape = SubResource("RectangleShape2D_feb5d")
-
-[node name="GhostPink" type="CharacterBody2D" parent="." groups=["Ghosts"]]
-position = Vector2(124, 44)
+[node name="GhostPink" type="CharacterBody2D" parent="."]
+position = Vector2(113, 115)
 scale = Vector2(0.8, 0.8)
 collision_layer = 8
 collision_mask = 3
 script = ExtResource("4_gee14")
 
 [node name="Collision" type="CollisionShape2D" parent="GhostPink"]
-scale = Vector2(0.625, 0.625)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_feb5d")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="GhostPink"]
@@ -6358,39 +6350,21 @@ sprite_frames = SubResource("SpriteFrames_boyg6")
 animation = &"down"
 frame_progress = 0.09616471
 
-[node name="Area2D" type="Area2D" parent="GhostPink"]
-scale = Vector2(0.79, 0.79)
-collision_layer = 8
-collision_mask = 3
-
-[node name="Collision" type="CollisionShape2D" parent="GhostPink/Area2D"]
-scale = Vector2(0.885, 0.885)
-shape = SubResource("RectangleShape2D_feb5d")
-
-[node name="GhostCyan" type="CharacterBody2D" parent="." groups=["Ghosts"]]
-position = Vector2(52, 212)
+[node name="GhostCyan" type="CharacterBody2D" parent="."]
+position = Vector2(113, 115)
 scale = Vector2(0.8, 0.8)
 collision_layer = 8
 collision_mask = 3
 script = ExtResource("4_gee14")
 
 [node name="Collision" type="CollisionShape2D" parent="GhostCyan"]
-scale = Vector2(0.625, 0.625)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_feb5d")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="GhostCyan"]
 material = SubResource("ShaderMaterial_j5wjh")
 sprite_frames = SubResource("SpriteFrames_xa8c5")
 animation = &"up"
-
-[node name="Area2D" type="Area2D" parent="GhostCyan"]
-scale = Vector2(0.79, 0.79)
-collision_layer = 8
-collision_mask = 3
-
-[node name="Collision" type="CollisionShape2D" parent="GhostCyan/Area2D"]
-scale = Vector2(0.885, 0.885)
-shape = SubResource("RectangleShape2D_feb5d")
 
 [node name="GhostOrange" type="CharacterBody2D" parent="."]
 position = Vector2(172, 187)
@@ -6400,22 +6374,13 @@ collision_mask = 3
 script = ExtResource("4_gee14")
 
 [node name="Collision" type="CollisionShape2D" parent="GhostOrange"]
-scale = Vector2(0.625, 0.625)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_feb5d")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="GhostOrange"]
 material = SubResource("ShaderMaterial_vef74")
 sprite_frames = SubResource("SpriteFrames_xex6t")
 animation = &"down"
-
-[node name="Area2D" type="Area2D" parent="GhostOrange"]
-scale = Vector2(0.79, 0.79)
-collision_layer = 8
-collision_mask = 3
-
-[node name="Collision" type="CollisionShape2D" parent="GhostOrange/Area2D"]
-scale = Vector2(0.885, 0.885)
-shape = SubResource("RectangleShape2D_feb5d")
 
 [node name="Vignette" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_feb5d")
@@ -6424,8 +6389,3 @@ offset_bottom = 248.0
 
 [node name="Game Over Screen" parent="." instance=ExtResource("7_u5sy4")]
 visible = false
-
-[connection signal="body_entered" from="GhostRed/Area2D" to="GhostRed" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="GhostPink/Area2D" to="GhostPink" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="GhostCyan/Area2D" to="GhostCyan" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="GhostOrange/Area2D" to="GhostOrange" method="_on_area_2d_body_entered"]

@@ -1,5 +1,6 @@
 # Pac-Man Exercise in Godot 4.5
-In this exercise you will complete a simplified Pac-Man game in Godot for the **"Programming Languages and Paradigms"** seminar at **UZH** (2025). Because the seminar focuses on **GDScript**, the basic project (*level, collisions, animated sprites, and UI*) has already been set up for you.
+In this exercise you will complete a simplified Pac-Man game in Godot for the **"Programming Languages and Paradigms"** seminar at **UZH** (2025).
+Because the seminar focuses on **GDScript**, the basic project (*level, collisions, animated sprites, and UI*) has already been set up for you.
 
 ## What you need
 Download the Godot Engine from the [official website](https://godotengine.org/download/) or via [Steam](https://store.steampowered.com/app/404790/Godot_Engine/).
@@ -11,7 +12,9 @@ When you are done, you can create a Pull Request so I can merge it into a soluti
 If you get completely stuck, feel free to open a **GitHub issue**. If you do not wish to use GitHub, see the `.pdf`-verion README for my contact information.
 
 ## Tasks
-To keep things beginner-friendly, we will simplify several aspects of the original Pac-Man and focus on what matters for the scripting part. A project template has already been created for you. Your job is to **extend** it with more GDScript code so that it meets the acceptance criteria below. Hints can be found below and inside the GDScript files directly. You do not need to use the template provided. Submit the solution in the same project structure I provided.
+To keep things beginner-friendly, we will simplify several aspects of the original Pac-Man and focus on what matters for the scripting part. A project template has already been created for you.
+Your job is to **extend** it with more GDScript code so that it meets the acceptance criteria below. Hints can be found below and inside the GDScript files directly.
+You do not need to use the template provided. Submit the solution in the same project structure I provided.
 
 ## What you will learn
 Although the Godot Engine itself is not the main focus of this assignment, you will inevitably learn your way around a 2D Godot project. You will in particular:

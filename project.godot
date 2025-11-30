@@ -21,6 +21,20 @@ window/size/viewport_width=224
 window/size/viewport_height=248
 window/stretch/mode="viewport"
 
+[layer_names]
+
+2d_render/layer_1="PacMan"
+2d_render/layer_2="World"
+2d_render/layer_3="Pellets"
+2d_render/layer_4="GhostRed"
+2d_render/layer_5="GhostPink"
+2d_render/layer_6="GhostCyan"
+2d_render/layer_7="GhostOrange"
+2d_physics/layer_1="PacMan"
+2d_physics/layer_2="World"
+2d_physics/layer_3="Pellets"
+2d_physics/layer_4="Ghosts"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
