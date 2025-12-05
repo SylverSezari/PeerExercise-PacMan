@@ -6341,6 +6341,10 @@ frame_progress = 0.8292039
 scale = Vector2(0.665, 0.665)
 shape = SubResource("RectangleShape2D_feb5d")
 
+[node name="Timer" type="Timer" parent="GhostRed"]
+one_shot = true
+autostart = true
+
 [node name="GhostPink" type="CharacterBody2D" parent="." groups=["Ghosts"]]
 position = Vector2(124, 44)
 scale = Vector2(0.8, 0.8)
@@ -6367,6 +6371,10 @@ collision_mask = 3
 scale = Vector2(0.885, 0.885)
 shape = SubResource("RectangleShape2D_feb5d")
 
+[node name="Timer" type="Timer" parent="GhostPink"]
+one_shot = true
+autostart = true
+
 [node name="GhostCyan" type="CharacterBody2D" parent="." groups=["Ghosts"]]
 position = Vector2(52, 212)
 scale = Vector2(0.8, 0.8)
@@ -6391,6 +6399,10 @@ collision_mask = 3
 [node name="Collision" type="CollisionShape2D" parent="GhostCyan/Area2D"]
 scale = Vector2(0.885, 0.885)
 shape = SubResource("RectangleShape2D_feb5d")
+
+[node name="Timer" type="Timer" parent="GhostCyan"]
+one_shot = true
+autostart = true
 
 [node name="GhostOrange" type="CharacterBody2D" parent="."]
 position = Vector2(172, 187)
@@ -6417,6 +6429,10 @@ collision_mask = 3
 scale = Vector2(0.885, 0.885)
 shape = SubResource("RectangleShape2D_feb5d")
 
+[node name="Timer" type="Timer" parent="GhostOrange"]
+one_shot = true
+autostart = true
+
 [node name="Vignette" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_feb5d")
 offset_right = 224.0
@@ -6426,6 +6442,10 @@ offset_bottom = 248.0
 visible = false
 
 [connection signal="body_entered" from="GhostRed/Area2D" to="GhostRed" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="GhostRed/Timer" to="GhostRed" method="_on_timer_timeout"]
 [connection signal="body_entered" from="GhostPink/Area2D" to="GhostPink" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="GhostPink/Timer" to="GhostPink" method="_on_timer_timeout"]
 [connection signal="body_entered" from="GhostCyan/Area2D" to="GhostCyan" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="GhostCyan/Timer" to="GhostCyan" method="_on_timer_timeout"]
 [connection signal="body_entered" from="GhostOrange/Area2D" to="GhostOrange" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="GhostOrange/Timer" to="GhostOrange" method="_on_timer_timeout"]
